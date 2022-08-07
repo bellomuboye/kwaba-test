@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import connectDB from "../../utils/connectDB";
+import PreApprovalRequest from "../../models/preApprovalRequest";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const {
     accomodationStatus,
     rentAmount,
@@ -20,9 +22,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+  await connectDB();
+
+  const request = await PreApprovalRequest.create(req.body);
+
   res.status(200).json({
-    message: "Details has been successfully Approved",
+    message: "Pre-Approval Request Saved",
     data: {
+      _id: request._id,
       accomodationStatus,
       rentAmount,
       monthlyEarning,
