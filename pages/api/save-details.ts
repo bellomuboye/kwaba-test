@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 import connectDB from "../../utils/connectDB";
 import PreApprovalRequest from "../../models/preApprovalRequest";
 
