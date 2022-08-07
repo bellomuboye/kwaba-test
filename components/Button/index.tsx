@@ -9,13 +9,14 @@ enum ButtonVariants {
 type ButtonProps = {
   variant: keyof typeof ButtonVariants;
   text: string;
+  onclick: () => void;
 };
 
-const Button = ({variant, text}: ButtonProps) => {
+const Button = ({variant, text, onclick}: ButtonProps) => {
   return (
     <button 
     className={`${styles['button']} ${styles[variant]}`}
-    type="submit"
+    onClick={onclick}
     >
         {text}
     </button>

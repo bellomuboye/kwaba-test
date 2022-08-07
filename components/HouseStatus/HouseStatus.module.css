@@ -6,7 +6,7 @@
     font-weight: 800;
     color: var(--kwaba-gray-light);
     cursor: pointer;
-    border: 1px solid var(--kwaba-gray-light);
+    border: 1px solid var(--kwaba-gray-light-2);
     border-radius: .8rem;
     margin-bottom: 2rem;
     transition: all .3s;

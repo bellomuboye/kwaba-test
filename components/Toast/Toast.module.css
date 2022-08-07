@@ -1,0 +1,62 @@
+.toast {
+  position: fixed;
+  width: 50%;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 2.4rem;
+  border-radius: 10px;
+  z-index: 200;
+  animation: showToast 1s ease-in;
+}
+@keyframes showToast {
+  0% {
+    transform: translateY(-100rem) translateX(-50%);
+  }
+
+  50% {
+    transform: translateY(2rem) translateX(-50%);
+  }
+
+  100% {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+.toast p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+}
+
+.hide__toast {
+  transform: translateY(-100rem);
+}
+
+.success {
+  border: 1px solid #57CE7E;
+  background:  #D4FAD3;
+}
+
+.success p {
+  color: #27AE61;
+}
+
+.danger {
+  border: 1px solid #ED6A56;
+  background: #FDE2D1;
+  
+}
+
+.danger p {
+  color: #E22B23;
+}
+
+@media only screen and (max-width: 768px) {
+  .toast {
+    width: 80%;
+  }
+}
+    

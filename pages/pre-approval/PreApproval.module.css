@@ -1,0 +1,26 @@
+.form {
+  width: 100%;
+  border: 1px solid var(--kwaba-purple-light-2);
+  border-bottom-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  border-top: none;
+  padding: 2rem 6rem;
+}
+
+.form__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--kwaba-purple);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 5rem;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .form {
+    padding: 2rem 2rem;
+  }
+}

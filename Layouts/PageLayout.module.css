@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+  width: 70vh;
+  margin: 4rem auto;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--kwaba-gray-2);
+  margin-bottom: 3rem;
+  margin-left: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

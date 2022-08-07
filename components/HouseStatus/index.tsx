@@ -5,14 +5,14 @@ type HouseStatusProps = {
     id: string;
     text: string;
     active: string | undefined;
-    onClick: (id: string) => void;
+    onClick: (id: string, text: string) => void;
 }
 
 const HouseStatus = ({id, text, active,onClick}: HouseStatusProps) => {
   return (
     <div 
     className={`${styles['container']} ${active && active === id ? styles['active'] : ''}`}
-    onClick={() => onClick(id)}
+    onClick={() => onClick(id, text)}
     >
         {text}
     </div>

@@ -4,9 +4,11 @@ import styles from './SelectInput.module.css';
 
 type SelectInputProps = {
   caption: string;
+  onChange: (plan: string) => void;
+  plan?: string;
 };
 
-const SelectInput = ({caption}: SelectInputProps) => {
+const SelectInput = ({caption, onChange, plan}: SelectInputProps) => {
     const [value, setValue] = useState('Select Plan');
     const [dropDownVisible, setDropDownVisible] = useState(false);
     const dropdownRef = React.useRef<HTMLDivElement>(null);
@@ -84,29 +86,30 @@ const SelectInput = ({caption}: SelectInputProps) => {
         onClick={() => setDropDownVisible(!dropDownVisible)}
         ref={dropdownRef}
       >
-        <p>{value}</p>
+        <p>{value !== "Select Plan" || !plan  ? value : plan}</p>
         {!dropDownVisible ? (
           <MdKeyboardArrowDown size={30} color={"#A9A9A9"} />
         ) : (
           <MdKeyboardArrowRight size={30} color={"#A9A9A9"} />
         )}
-      {dropDownVisible && 
-        <div className={styles["dropDown"]}>
+        {dropDownVisible && (
+          <div className={styles["dropDown"]}>
             <ul>
-                {dropDownItems.map(({ id, text }) => (
-                    <li 
-                        key={id} 
-                        onClick={() => {
-                             setValue(text)
-                             setDropDownVisible(false)
-                            }
-                        }
-                    >{text}</li>
-                ))
-                }
+              {dropDownItems.map(({ id, text }) => (
+                <li
+                  key={id}
+                  onClick={() => {
+                    onChange(text);
+                    setValue(text);
+                    setDropDownVisible(false);
+                  }}
+                >
+                  {text}
+                </li>
+              ))}
             </ul>
-        </div>
-      }
+          </div>
+        )}
       </div>
     </div>
   );
