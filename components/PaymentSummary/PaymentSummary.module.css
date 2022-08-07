@@ -1,0 +1,32 @@
+.paymentSummary {
+  width: 100%;
+}
+
+.paymentSummary p {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--kwaba-gray-2);
+  margin-bottom: 1rem;
+}
+
+.option__container {
+  width: 100%;
+  padding: 2rem 3rem 3rem 3rem;
+  border-radius: 0.8rem;
+  background: var(--kwaba-purple-light);
+}
+
+.option__item {
+  border-bottom: 0.1rem solid var(--kwaba-white);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--kwaba-gray-2);
+}
+
+.option__item_value {
+    color: var(--kwaba-black);
+}

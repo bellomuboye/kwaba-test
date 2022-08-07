@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap');
+
+:root {
+  --kwaba-white: #ffffff;
+  --kwaba-black: #000000;
+  --kwaba-green: #50C878;
+  --kwaba-purple: #160566;
+  --kwaba-purple-light: #E6E6FA;
+  --kwaba-purple-light-2: #b8b8f9;
+  --kwaba-gray-light: #A9A9A9;
+   --kwaba-gray-light-2: #ccc;
+  --kwaba-gray: #999;
+  --kwaba-gray-2: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'poppins', 'san-serif';
+
+
+}
+
+input {
+  font-size: 16px !important;
+}

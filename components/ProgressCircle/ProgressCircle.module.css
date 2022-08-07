@@ -1,0 +1,46 @@
+.container {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--kwaba-white);
+}
+
+.percentage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(270deg);
+  
+}
+
+.percentage svg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.percentage svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 10;
+  transform: translate(1rem, 1rem);
+  stroke: var(--kwaba-black);
+  stroke-dasharray: 126;
+  stroke-dashoffset: 126;
+}
+
+.percentage svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--kwaba-gray);
+}
+
+
+.percentage svg circle:nth-child(2) {
+    stroke: var(--kwaba-green);
+    stroke-dashoffset: calc(126 - (126 * 0));
+    transition: all .3s ease;
+}

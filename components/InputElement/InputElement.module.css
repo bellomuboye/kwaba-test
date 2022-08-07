@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+}
+
+.container p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--kwaba-gray-2);
+    margin-bottom: 1rem;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  transition: border 0.15s ease;
+}
+
+.formLabel {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: var(--kwaba-gray-light);
+  transition: all 0.3s ease;
+}
+
+.formInput {
+  width: 100%;
+  padding: 2.5rem 1.5rem;
+  border: 1px solid var(--kwaba-gray-light);
+  border-radius: 0.8rem;
+  outline: none;
+  height: 100%;
+  color: var(--kwaba-black);
+  font-weight: 800;
+}
+
+.formInput:focus, .formInput:active {
+    border-color: var(--kwaba-purple-light-2);
+}
+
+.formInput:focus ~ .formLabel, .formInput:active ~ .formLabel {
+    top: 10%;
+    transform: scale(0.8);
+}
