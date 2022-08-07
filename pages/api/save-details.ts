@@ -24,12 +24,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   await connectDB();
 
-  const request = await PreApprovalRequest.create(req.body);
+  // const request = await PreApprovalRequest.create(req.body);
 
   res.status(200).json({
     message: "Pre-Approval Request Saved",
     data: {
-      _id: request._id,
+      // _id: request._id,
       accomodationStatus,
       rentAmount,
       monthlyEarning,
